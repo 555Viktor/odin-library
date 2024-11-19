@@ -1,2 +1,2 @@
 # odin-library
-Library
+Library 📚
