@@ -21,6 +21,19 @@ body,
     width: 60vw;
 }
 
+.btn-shared-style {
+    border: none;
+    outline: none;
+    color: white;
+
+    border-radius: 0.25rem;
+    
+    padding-inline: 1.2rem;
+    padding-block: 0.44rem;
+
+    cursor: pointer;
+}
+
 /* Body layout */
 body {
     min-height: 100vh;
@@ -36,7 +49,7 @@ body {
     margin-block-end: 1rem;
 }
 
-/* Submit book container styling*/
+/* Add book container styling*/
 .input-field-wrap {
     margin-block-end: 1.2rem;
 }
@@ -44,6 +57,15 @@ body {
 .input-field {
     margin-inline-end: 1.5rem;
     flex-direction: column;
+}
+
+.input-field input {
+    padding-inline-start: 0.25rem;
+    padding-block: 0.25rem;
+}
+
+.add-book-container .btn-submit {
+    background: rgb(33, 110, 110);
 }
 
 /* Book list styling */
@@ -56,25 +78,25 @@ body {
     text-align: left;
 }
 
-table.book-list-table {
+.book-list-table {
     border-collapse: collapse;
     border-spacing: 50px 0;
 }
   
-table.book-list-table tr {
+.book-list-table tr {
     border-bottom: 1pt solid black;
 }
 
-table.book-list-table th,
-table.book-list-table td {
+.book-list-table th,
+.book-list-table td {
     padding-block: 0.8rem;
 }
 
-.add-book-container .btn-submit,
-table.book-list-table .btn-read {
-    background: none;
-    outline: none;
-    
-    padding-inline: 1.2rem;
-    padding-block: 0.4rem;
+.book-list-table .btn-delete-book {
+    background: red;
+}
+
+.book-list-table .btn-read {
+    background:tan ;
+    color: black;
 }
