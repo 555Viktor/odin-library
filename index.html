@@ -13,6 +13,38 @@
         <p>Organize your book collection, keep track of what you've read, and discover your next favorite read.</p>
         <p>Manage your book list with ease and explore new titles effortlessly!</p>
     </div>
+
+    <div class="add-book-container">
+        
+        <div class="input-field-wrap">
+            <div class="input-field input-book-name">
+                <label for="book-name">Book</label>
+                <input type="text" name="book-name" id="">
+            </div>
+            
+            <div class="input-field input-author">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="">
+            </div>
+
+            <div class="input-field input-pages">
+                <label for="pages">Pages</label>
+                <input type="number" name="pages" id="">
+            </div>
+
+            <div class="input-field input-read-status">
+                <label for="read-status">Status</label>
+                <select name="read-status" id="">
+                    <option value="read">Read</option>
+                    <option value="not-read">Not read</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="btn-submit-wrap">
+            <button class="btn-submit">Submit</button>
+        </div>
+    </div>
     
     <!-- JS -->
      <script src="./index.js"></script>
