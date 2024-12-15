@@ -17,6 +17,7 @@ body,
 .add-book-container,
 .book-list-container {
     margin-block-end: 1.5rem;
+    width: 600px;
 }
 
 /* Body layout */
@@ -34,8 +35,7 @@ body {
     margin-block-end: 1rem;
 }
 
-/* Add book container styling*/
-
+/* Submit book container styling*/
 .input-field-wrap {
     margin-block-end: 1.2rem;
 }
@@ -45,3 +45,22 @@ body {
     flex-direction: column;
 }
 
+/* Book list styling */
+.book-list-container table.book-list-table{
+    width: 100%;
+    text-align: left;
+}
+
+table.book-list-table {
+    border-collapse: collapse;
+    border-spacing: 50px 0;
+}
+  
+table.book-list-table tr {
+    border-bottom: 1pt solid black;
+}
+
+table.book-list-table th,
+table.book-list-table td {
+    padding-block: 0.5rem;
+}
