@@ -1,3 +1,4 @@
+/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +6,20 @@
     font-family: "Raleway", sans-serif;
 }
 
+/* Grouped styles */
 body,
 .input-field-wrap,
 .input-field {
     display: flex;
-} /* Flex containers */
+} 
 
+.header,
+.add-book-container,
+.book-list-container {
+    margin-block-end: 1.5rem;
+}
+
+/* Body layout */
 body {
     min-height: 100vh;
     
@@ -19,16 +28,19 @@ body {
     flex-direction: column;
 }
 
-.header,
-.add-book-container,
-.book-list-container {
-    margin-block-end: 1.5rem;
-}
 
+/* Header styling */
 .header h1 {
     margin-block-end: 1rem;
 }
 
+/* Add book container styling*/
+
+.input-field-wrap {
+    margin-block-end: 1.2rem;
+}
+
 .input-field {
+    margin-inline-end: 1rem;
     flex-direction: column;
 }
