@@ -69,3 +69,12 @@ table.book-list-table th,
 table.book-list-table td {
     padding-block: 0.8rem;
 }
+
+.add-book-container .btn-submit,
+table.book-list-table .btn-read {
+    background: none;
+    outline: none;
+    
+    padding-inline: 1.2rem;
+    padding-block: 0.4rem;
+}
