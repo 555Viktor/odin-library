@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     font-family: "Raleway", sans-serif;
 }
 
@@ -17,7 +18,7 @@ body,
 .add-book-container,
 .book-list-container {
     margin-block-end: 1.5rem;
-    width: 600px;
+    width: 60vw;
 }
 
 /* Body layout */
@@ -41,11 +42,15 @@ body {
 }
 
 .input-field {
-    margin-inline-end: 1rem;
+    margin-inline-end: 1.5rem;
     flex-direction: column;
 }
 
 /* Book list styling */
+.book-list-container {
+    min-height: 360px;
+}
+
 .book-list-container table.book-list-table{
     width: 100%;
     text-align: left;
@@ -62,5 +67,5 @@ table.book-list-table tr {
 
 table.book-list-table th,
 table.book-list-table td {
-    padding-block: 0.5rem;
+    padding-block: 0.8rem;
 }
