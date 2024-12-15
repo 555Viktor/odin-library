@@ -59,9 +59,16 @@ body {
     flex-direction: column;
 }
 
+.input-field input,
+.input-field select {
+    height: 30px;
+}
+
 .input-field input {
-    padding-inline-start: 0.25rem;
+    padding-inline-start: 0.4rem;
     padding-block: 0.25rem;
+
+    outline: none;
 }
 
 .add-book-container .btn-submit {
