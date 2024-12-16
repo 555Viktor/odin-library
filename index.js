@@ -39,13 +39,22 @@ function appendLastBookToDom (booksArr) {
             readButton.classList.add('btn-read-status', 'btn-shared-style');
             
             tableData.appendChild(readButton);
-        } else {
-            tableData.innerText = lastBook[property];
-        }
+        } 
+        
+        else tableData.innerText = lastBook[property];
+
 
         tableRow.appendChild(tableData);
     }
 
+
+    let deleteCell = document.createElement('td');
+    let deleteButton = document.createElement('button');
+    deleteButton.classList.add('btn-delete-book', 'btn-shared-style');
+    deleteButton.innerText = 'Delete';
+
+    deleteCell.appendChild(deleteButton);
+    tableRow.appendChild(deleteCell);
     booksTableBody.appendChild(tableRow);
 }
 
@@ -59,6 +68,3 @@ addBookButton.addEventListener('click', () => {
 
     appendLastBookToDom(myBooks);
 })
-
-// let readButton = document.createElement('button').classList.add('btn-read-status', 'btn-shared-style');
-// let deleteButton = document.createElement('button').classList.add('btn-delete-book', 'btn-shared-style');
