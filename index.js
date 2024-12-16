@@ -55,10 +55,17 @@ function appendLastBookToDom (booksArr) {
 
     deleteCell.appendChild(deleteButton);
     tableRow.appendChild(deleteCell);
+
+    // After all required cells have been filled and added to the table row, add the table row to table body.
     booksTableBody.appendChild(tableRow);
 }
 
 addBookButton.addEventListener('click', () => {
+    if (!bookNameInput.value || !bookAuthorInput.value || !bookPagesInput.value || !bookStatusSelect.value) {
+        alert('Please fill in all fields!');
+        return;
+    }
+
     let newBook = new Book (bookNameInput.value, 
         bookAuthorInput.value, 
         bookPagesInput.value, 
