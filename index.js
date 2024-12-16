@@ -8,6 +8,8 @@ const addBookButton = document.querySelector('.btn-add-book');
 const readStatusButton = document.querySelector('.btn-read-status');
 const deleteBookButton = document.querySelector('.btn-delete-book');
 
+const booksTableBody = document.querySelector('.book-list-table .all-books-list');
+
 let myBooks = [];
 
 function Book(title, author, pages, isRead) {
@@ -17,8 +19,23 @@ function Book(title, author, pages, isRead) {
     this.isRead = isRead || false;
 }
 
+function appendLastBookToDom (booksArr) {
+
+    if (booksArr.length < 0) {
+        console.log('Book array is empty');
+        return
+    }
+
+    let lastBook = booksArr[booksArr.length - 1];
+}
+
 addBookButton.addEventListener('click', () => {
-    let newBook = new Book(bookNameInput.value, bookAuthorInput.value, bookPagesInput.value, bookStatusSelect.value);
+    let newBook = new Book (bookNameInput.value, 
+        bookAuthorInput.value, 
+        bookPagesInput.value, 
+        bookStatusSelect.value);
     
     myBooks.push(newBook);
+
+    appendLastBookToDom(myBooks);
 })
