@@ -88,12 +88,10 @@ addBookButton.addEventListener('click', () => {
     let readButtonsNodeList = document.querySelectorAll('.btn-read-status');
 
     readButtonsNodeList.forEach(readButton => {
-        readButton.addEventListener('click', (event) => {
-            if (readButton.innerText === 'Read') {
-                readButton.innerText = 'Not read';
-            } else if (readButton.innerText === 'Not read') {
-                readButton.innerText = 'Read';
-            }
+        readButton.addEventListener('click', () => {
+            if (readButton.innerText === 'Read')    readButton.innerText = 'Not read';
+
+            else if (readButton.innerText === 'Not read')   readButton.innerText = 'Read'; 
         })
     })
 })
