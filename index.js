@@ -27,6 +27,26 @@ function appendLastBookToDom (booksArr) {
     }
 
     let lastBook = booksArr[booksArr.length - 1];
+
+    let tableRow = document.createElement('tr');
+
+    for (let property in lastBook) {
+        let tableData = document.createElement('td');
+
+        if (property === 'isRead') {
+            let readButton = document.createElement('button');
+            readButton.innerHTML = 'Read';
+            readButton.classList.add('btn-read-status', 'btn-shared-style');
+            
+            tableData.appendChild(readButton);
+        } else {
+            tableData.innerText = lastBook[property];
+        }
+
+        tableRow.appendChild(tableData);
+    }
+
+    booksTableBody.appendChild(tableRow);
 }
 
 addBookButton.addEventListener('click', () => {
@@ -39,3 +59,6 @@ addBookButton.addEventListener('click', () => {
 
     appendLastBookToDom(myBooks);
 })
+
+// let readButton = document.createElement('button').classList.add('btn-read-status', 'btn-shared-style');
+// let deleteButton = document.createElement('button').classList.add('btn-delete-book', 'btn-shared-style');
