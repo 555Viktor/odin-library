@@ -18,8 +18,7 @@ function Book(title, author, pages, isRead) {
 }
 
 addBookButton.addEventListener('click', () => {
-    console.log('Book Name:', bookNameInput.value);
-    console.log('Author:', bookAuthorInput.value);
-    console.log('Pages:', bookPagesInput.value);
-    console.log('Read Status:', bookStatusSelect.value);
+    let newBook = new Book(bookNameInput.value, bookAuthorInput.value, bookPagesInput.value, bookStatusSelect.value);
+    
+    myBooks.push(newBook);
 })
