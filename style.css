@@ -112,3 +112,16 @@ body {
     background:tan ;
     color: black;
 }
+
+
+
+
+.btn-submit-wrap {
+    display: flex;
+    align-items: baseline;
+}
+
+.warning-message p {
+    margin-inline-start: 2rem;
+    color: red;
+}
