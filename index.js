@@ -94,4 +94,7 @@ addBookButton.addEventListener('click', () => {
             else if (readButton.innerText === 'Not read')   readButton.innerText = 'Read'; 
         })
     })
+
+    // Reset input field values to none
+    bookNameInput.value = bookAuthorInput.value = bookPagesInput.value = bookStatusSelect.value = '';
 })
