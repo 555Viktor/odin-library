@@ -27,7 +27,6 @@ function appendLastBookToDom (booksArr) {
     }
 
     let lastBook = booksArr[booksArr.length - 1];
-
     let tableRow = document.createElement('tr');
 
     for (let property in lastBook) {
@@ -43,10 +42,8 @@ function appendLastBookToDom (booksArr) {
         
         else tableData.innerText = lastBook[property];
 
-
         tableRow.appendChild(tableData);
     }
-
 
     let deleteCell = document.createElement('td');
     let deleteButton = document.createElement('button');
@@ -66,7 +63,8 @@ addBookButton.addEventListener('click', () => {
         return;
     }
 
-    let newBook = new Book (bookNameInput.value, 
+    let newBook = new Book (
+        bookNameInput.value, 
         bookAuthorInput.value, 
         bookPagesInput.value, 
         bookStatusSelect.value);
@@ -74,4 +72,14 @@ addBookButton.addEventListener('click', () => {
     myBooks.push(newBook);
 
     appendLastBookToDom(myBooks);
+
+    let deleteButtonsNodeList = document.querySelectorAll('.btn-delete-book');
+
+    deleteButtonsNodeList.forEach(deleteButton => {
+        deleteButton.addEventListener('click', (event) => {
+            let currentRow = event.target.closest('tr');
+            
+            currentRow.remove();
+        })
+    })
 })
