@@ -27,6 +27,10 @@ body,
     outline: none;
     color: white;
 
+    font-size: 0.8rem;
+    font-weight: 650;
+    white-space: nowrap;
+
     border-radius: 0.25rem;
     
     padding-inline: 1.2rem;
