@@ -4,6 +4,8 @@ const bookAuthorInput = document.querySelector('.input-field #input-author');
 const bookPagesInput = document.querySelector('.input-field #input-pages');
 const bookStatusSelect = document.querySelector('.input-field #input-read-status');
 
+const invalidInputMessage = document.querySelector('.warning-message');
+
 const addBookButton = document.querySelector('.btn-add-book');
 const readStatusButton = document.querySelector('.btn-read-status');
 const deleteBookButton = document.querySelector('.btn-delete-book');
@@ -17,6 +19,14 @@ function Book(title, author, pages, isRead) {
     this.author = author;
     this.pages = pages;
     this.isRead = isRead || false;
+}
+
+function showErrorMessage () {
+    invalidInputMessage.style.display = 'block';
+}
+
+function hideErrorMessage () {
+    invalidInputMessage.style.display = 'none';
 }
 
 function appendLastBookToDom (booksArr) {
@@ -59,9 +69,9 @@ function appendLastBookToDom (booksArr) {
 
 addBookButton.addEventListener('click', () => {
     if (!bookNameInput.value || !bookAuthorInput.value || !bookPagesInput.value || !bookStatusSelect.value) {
-        alert('Please fill in all fields!');
+        showErrorMessage();
         return;
-    }
+    } else hideErrorMessage();
 
     let newBook = new Book (
         bookNameInput.value, 
