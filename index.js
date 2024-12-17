@@ -3,7 +3,6 @@ const bookNameInput = document.querySelector('.input-field #input-book-name');
 const bookAuthorInput = document.querySelector('.input-field #input-author');
 const bookPagesInput = document.querySelector('.input-field #input-pages');
 const bookStatusSelect = document.querySelector('.input-field #input-read-status');
-
 const invalidInputMessage = document.querySelector('.warning-message');
 
 const addBookButton = document.querySelector('.btn-add-book');
@@ -21,11 +20,11 @@ function Book(title, author, pages, isRead) {
     this.isRead = isRead || false;
 }
 
-function showErrorMessage () {
+function showInvalidInputMessage () {
     invalidInputMessage.style.display = 'block';
 }
 
-function hideErrorMessage () {
+function hideInvalidInputMessage () {
     invalidInputMessage.style.display = 'none';
 }
 
@@ -43,6 +42,7 @@ function appendLastBookToDom (booksArr) {
         let tableData = document.createElement('td');
 
         if (property === 'isRead') {
+            
             let readButton = document.createElement('button');
             readButton.innerHTML = 'Read';
             readButton.classList.add('btn-read-status', 'btn-shared-style');
@@ -69,9 +69,9 @@ function appendLastBookToDom (booksArr) {
 
 addBookButton.addEventListener('click', () => {
     if (!bookNameInput.value || !bookAuthorInput.value || !bookPagesInput.value || !bookStatusSelect.value) {
-        showErrorMessage();
+        showInvalidInputMessage();
         return;
-    } else hideErrorMessage();
+    } else hideInvalidInputMessage();
 
     let newBook = new Book (
         bookNameInput.value, 
@@ -89,7 +89,6 @@ addBookButton.addEventListener('click', () => {
     deleteButtonsNodeList.forEach(deleteButton => {
         deleteButton.addEventListener('click', (event) => {
             let currentRow = event.target.closest('tr');
-            
             currentRow.remove();
         })
     })
