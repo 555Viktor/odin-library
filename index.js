@@ -46,9 +46,27 @@ function createBookDeleteButton() {
 
 function addDeleteButtonEvent(deleteBtn) {
     deleteBtn.addEventListener('click', (event) => {
-    let currentRow = event.target.closest('tr');
-    currentRow.remove();
-})
+        let currentRow = event.target.closest('tr');
+        currentRow.remove();
+    })
+}
+
+function createBookReadStatusButton() {	
+    let readButton = document.createElement('button');
+    readButton.innerHTML = 'Read';
+    readButton.classList.add('btn-read-status', 'btn-shared-style');
+    
+    addReadButtonEvent (readButton)
+
+    return readButton;
+}
+
+function addReadButtonEvent (readBtn) {
+    readBtn.addEventListener('click', () => {
+        if (readBtn.innerText === 'Read')    readBtn.innerText = 'Not read';
+
+        else if (readBtn.innerText === 'Not read')   readBtn.innerText = 'Read'; 
+    })
 }
 
 
@@ -67,21 +85,7 @@ function appendLastBookToDom (booksArr) {
     for (let property in lastBook) {
         let tableData = document.createElement('td');
 
-        if (property === 'isRead') {
-            
-            let readButton = document.createElement('button');
-            readButton.innerHTML = 'Read';
-            readButton.classList.add('btn-read-status', 'btn-shared-style');
-
-            readButton.addEventListener('click', () => {
-                if (readButton.innerText === 'Read')    readButton.innerText = 'Not read';
-    
-                else if (readButton.innerText === 'Not read')   readButton.innerText = 'Read'; 
-            })
-            
-            tableData.appendChild(readButton);
-        } 
-        
+        if (property === 'isRead') tableData.appendChild(createBookReadStatusButton());
         else tableData.innerText = lastBook[property];
 
         tableRow.appendChild(tableData);
