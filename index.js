@@ -28,6 +28,10 @@ function hideInvalidInputMessage () {
     invalidInputMessage.style.display = 'none';
 }
 
+function resetInputFieldValues () {
+    bookNameInput.value = bookAuthorInput.value = bookPagesInput.value = bookStatusSelect.value = '';
+}
+
 function appendLastBookToDom (booksArr) {
 
     if (booksArr.length < 0) {
@@ -46,6 +50,12 @@ function appendLastBookToDom (booksArr) {
             let readButton = document.createElement('button');
             readButton.innerHTML = 'Read';
             readButton.classList.add('btn-read-status', 'btn-shared-style');
+
+            readButton.addEventListener('click', () => {
+                if (readButton.innerText === 'Read')    readButton.innerText = 'Not read';
+    
+                else if (readButton.innerText === 'Not read')   readButton.innerText = 'Read'; 
+            })
             
             tableData.appendChild(readButton);
         } 
@@ -59,6 +69,11 @@ function appendLastBookToDom (booksArr) {
     let deleteButton = document.createElement('button');
     deleteButton.classList.add('btn-delete-book', 'btn-shared-style');
     deleteButton.innerText = 'Delete';
+
+    deleteButton.addEventListener('click', (event) => {
+        let currentRow = event.target.closest('tr');
+        currentRow.remove();
+    })
 
     deleteCell.appendChild(deleteButton);
     tableRow.appendChild(deleteCell);
@@ -82,28 +97,5 @@ addBookButton.addEventListener('click', () => {
     myBooks.push(newBook);
 
     appendLastBookToDom(myBooks);
-
-    // Delete button functionality for each table row
-    let deleteButtonsNodeList = document.querySelectorAll('.btn-delete-book');
-
-    deleteButtonsNodeList.forEach(deleteButton => {
-        deleteButton.addEventListener('click', (event) => {
-            let currentRow = event.target.closest('tr');
-            currentRow.remove();
-        })
-    })
-
-    // Read button functionality for each table row
-    let readButtonsNodeList = document.querySelectorAll('.btn-read-status');
-
-    readButtonsNodeList.forEach(readButton => {
-        readButton.addEventListener('click', () => {
-            if (readButton.innerText === 'Read')    readButton.innerText = 'Not read';
-
-            else if (readButton.innerText === 'Not read')   readButton.innerText = 'Read'; 
-        })
-    })
-
-    // Reset input field values to none
-    bookNameInput.value = bookAuthorInput.value = bookPagesInput.value = bookStatusSelect.value = '';
+    resetInputFieldValues();
 })
