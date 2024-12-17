@@ -13,6 +13,7 @@ const booksTableBody = document.querySelector('.book-list-table .all-books-list'
 
 let myBooks = [];
 
+// Book constructer function
 function Book(title, author, pages, isRead) {
     this.title = title;
     this.author = author;
@@ -20,6 +21,7 @@ function Book(title, author, pages, isRead) {
     this.isRead = isRead || false;
 }
 
+// Helper functions
 function showInvalidInputMessage () {
     invalidInputMessage.style.display = 'block';
 }
@@ -32,8 +34,28 @@ function resetInputFieldValues () {
     bookNameInput.value = bookAuthorInput.value = bookPagesInput.value = bookStatusSelect.value = '';
 }
 
-function appendLastBookToDom (booksArr) {
+function createBookDeleteButton() {
+    let deleteButton = document.createElement('button');
+    deleteButton.classList.add('btn-delete-book', 'btn-shared-style');
+    deleteButton.innerText = 'Delete';
+    
+    addDeleteButtonEvent(deleteButton);
+    
+    return deleteButton;
+}
 
+function addDeleteButtonEvent(deleteBtn) {
+    deleteBtn.addEventListener('click', (event) => {
+    let currentRow = event.target.closest('tr');
+    currentRow.remove();
+})
+}
+
+
+// ------------------------------------
+
+
+function appendLastBookToDom (booksArr) {
     if (booksArr.length < 0) {
         console.log('Book array is empty');
         return
@@ -66,22 +88,14 @@ function appendLastBookToDom (booksArr) {
     }
 
     let deleteCell = document.createElement('td');
-    let deleteButton = document.createElement('button');
-    deleteButton.classList.add('btn-delete-book', 'btn-shared-style');
-    deleteButton.innerText = 'Delete';
-
-    deleteButton.addEventListener('click', (event) => {
-        let currentRow = event.target.closest('tr');
-        currentRow.remove();
-    })
-
-    deleteCell.appendChild(deleteButton);
+    deleteCell.appendChild(createBookDeleteButton());
     tableRow.appendChild(deleteCell);
 
     // After all required cells have been filled and added to the table row, add the table row to table body.
     booksTableBody.appendChild(tableRow);
 }
 
+// Event
 addBookButton.addEventListener('click', () => {
     if (!bookNameInput.value || !bookAuthorInput.value || !bookPagesInput.value || !bookStatusSelect.value) {
         showInvalidInputMessage();
