@@ -67,6 +67,9 @@ function addReadButtonEvent (readBtn) {
     })
 }
 
+function isUserInputValid() {
+    return bookNameInput.value && bookAuthorInput.value && bookPagesInput.value && bookStatusSelect.value;
+}
 
 // ------------------------------------
 
@@ -99,7 +102,7 @@ function appendLastBookToDom (booksArr) {
 
 // Event
 addBookButton.addEventListener('click', () => {
-    if (!bookNameInput.value || !bookAuthorInput.value || !bookPagesInput.value || !bookStatusSelect.value) {
+    if (!isUserInputValid()) {
         showInvalidInputMessage();
         return;
     } else hideInvalidInputMessage();
