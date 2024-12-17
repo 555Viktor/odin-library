@@ -22,12 +22,17 @@ function Book(title, author, pages, isRead) {
 }
 
 // Helper functions
+// ------------------------------------
 function showInvalidInputMessage () {
     invalidInputMessage.style.display = 'block';
 }
 
 function hideInvalidInputMessage () {
     invalidInputMessage.style.display = 'none';
+}
+
+function isUserInputValid() {
+    return bookNameInput.value && bookAuthorInput.value && bookPagesInput.value && bookStatusSelect.value;
 }
 
 function resetInputFieldValues () {
@@ -66,11 +71,6 @@ function addReadButtonEvent (readBtn) {
         readBtn.innerText = readBtn.innerText === 'Read' ? 'Not read' : 'Read';
     })
 }
-
-function isUserInputValid() {
-    return bookNameInput.value && bookAuthorInput.value && bookPagesInput.value && bookStatusSelect.value;
-}
-
 // ------------------------------------
 
 
