@@ -76,7 +76,7 @@ function addReadButtonEvent (readBtn) {
 
 function appendLastBookToDom (booksArr) {
     if (booksArr.length < 0) {
-        console.log('Book array is empty');
+        console.log('Book array is empty.');
         return
     }
 
@@ -111,7 +111,8 @@ addBookButton.addEventListener('click', () => {
         bookNameInput.value, 
         bookAuthorInput.value, 
         bookPagesInput.value, 
-        bookStatusSelect.value);
+        bookStatusSelect.value
+    );
     
     myBooks.push(newBook);
 
