@@ -63,9 +63,7 @@ function createBookReadStatusButton() {
 
 function addReadButtonEvent (readBtn) {
     readBtn.addEventListener('click', () => {
-        if (readBtn.innerText === 'Read')    readBtn.innerText = 'Not read';
-
-        else if (readBtn.innerText === 'Not read')   readBtn.innerText = 'Read'; 
+        readBtn.innerText = readBtn.innerText === 'Read' ? 'Not read' : 'Read';
     })
 }
 
