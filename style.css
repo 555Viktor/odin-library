@@ -22,7 +22,7 @@
 
     font-family: "Raleway", sans-serif;
 
-    color: #FFF5EE;
+    color: var(--color-text-default)
 }
 
 /* Grouped styles */
@@ -63,7 +63,7 @@ body {
     align-items: center;
     flex-direction: column;
 
-    background: 	#24292e;
+    background: var(--color-background);
 }
 
 
@@ -88,7 +88,7 @@ body {
 .input-field input,
 .input-field select {
     height: 30px;
-    background: #2b3137;
+    background: var(--color-input-background);
 
     border: 0.1rem solid #FFF5EE;
     margin-block-start: 0.4rem;
@@ -114,7 +114,7 @@ body {
 }
 
 .add-book-container .btn-add-book {
-    background:#4078c0;
+    background:var(--color-button-primary);
     margin-inline-start: 0.5rem;
 }
 
@@ -130,11 +130,11 @@ body {
     padding-inline: 1rem;
     padding-block: 0.3rem;
 
-    border: 2px solid red;
+    border: 2px solid var(--color-warning-border);
     border-radius: 0.25rem;
 
     font-size: 1rem;
-    color: red;
+    color: var(--color-warning-text);
     font-weight: 600;
 }
 
@@ -163,9 +163,9 @@ body {
 }
 
 .book-list-table .btn-delete-book {
-    background: #f0440a;
+    background: var(--color-button-danger);
 }
 
 .book-list-table .btn-read-status {
-    background:#2dba4e;
+    background:var(--color-button-success);
 }
