@@ -14,7 +14,6 @@
     --color-warning-text: #bd2c00; /* Warning text */
 }
 
-
 /* CSS Reset */
 * {
     margin: 0;
@@ -54,7 +53,18 @@ body,
     padding-block: 0.44rem;
 
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+.btn-shared-style:hover {
+    transform: scale(1.05); 
+}
+
+.btn-shared-style:active {
+    transform: scale(1); 
+}
+
+
 
 /* Body layout */
 body {
