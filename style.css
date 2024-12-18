@@ -6,6 +6,8 @@
     box-sizing: border-box;
 
     font-family: "Raleway", sans-serif;
+
+    color: #FFF5EE;
 }
 
 /* Grouped styles */
@@ -25,9 +27,8 @@ body,
 .btn-shared-style {
     border: none;
     outline: none;
-    color: white;
 
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 650;
     white-space: nowrap;
 
@@ -43,13 +44,18 @@ body,
 body {
     min-height: 100vh;
     
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
+
+    background: 	#24292e;
 }
 
 
 /* Header styling */
+.header {
+    margin-block-start: 2rem;
+}
 .header h1 {
     margin-block-end: 1rem;
 }
@@ -67,17 +73,34 @@ body {
 .input-field input,
 .input-field select {
     height: 30px;
+    background: #2b3137;
+
+    border: 0.1rem solid #FFF5EE;
+    margin-block-start: 0.4rem;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 .input-field input {
-    padding-inline-start: 0.4rem;
-    padding-block: 0.25rem;
+    padding-inline-start: 1rem;
+    padding-block: 0.6rem;
 
     outline: none;
 }
 
-.add-book-container .btn-submit {
-    background: rgb(33, 110, 110);
+.input-field label {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.add-book-container {
+    margin-block: 1.5rem;
+}
+
+.add-book-container .btn-add-book {
+    background:#4078c0;
+    margin-inline-start: 0.5rem;
 }
 
 /* Book list styling */
@@ -85,7 +108,7 @@ body {
     min-height: 360px;
 }
 
-.book-list-container table.book-list-table{
+.book-list-container table.book-list-table {
     width: 100%;
     text-align: left;
 }
@@ -105,12 +128,11 @@ body {
 }
 
 .book-list-table .btn-delete-book {
-    background: red;
+    background: #f0440a;
 }
 
 .book-list-table .btn-read-status {
-    background:tan ;
-    color: black;
+    background:#2dba4e;
 }
 
 
