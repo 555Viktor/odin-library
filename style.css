@@ -1,4 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-background: #24292e; /* Body and container background */
+    --color-text-default: #FFF5EE; /* Default text */
+    --color-input-background: #2b3137; /* Input and select background */
+    
+    --color-button-primary: #4078c0; /* Primary button */
+    --color-button-danger: #f0440a; /* Delete button */
+    --color-button-success: #2dba4e; /* Read status button */
+
+    --color-warning-border: #bd2c00; /* Warning border */
+    --color-warning-text: #bd2c00; /* Warning text */
+}
+
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -103,7 +118,27 @@ body {
     margin-inline-start: 0.5rem;
 }
 
-/* Book list styling */
+.btn-submit-wrap {
+    display: flex;
+    align-items: baseline;
+}
+
+.warning-message {
+    display: none;
+
+    margin-inline-start: 2rem;
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+
+    border: 2px solid red;
+    border-radius: 0.25rem;
+
+    font-size: 1rem;
+    color: red;
+    font-weight: 600;
+}
+
+/* Book table list styling */
 .book-list-container {
     min-height: 360px;
 }
@@ -133,27 +168,4 @@ body {
 
 .book-list-table .btn-read-status {
     background:#2dba4e;
-}
-
-
-
-
-.btn-submit-wrap {
-    display: flex;
-    align-items: baseline;
-}
-
-.warning-message {
-    display: none;
-
-    margin-inline-start: 2rem;
-    padding-inline: 1rem;
-    padding-block: 0.3rem;
-
-    border: 2px solid red;
-    border-radius: 0.25rem;
-
-    font-size: 1rem;
-    color: red;
-    font-weight: 600;
 }
