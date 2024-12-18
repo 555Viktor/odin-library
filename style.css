@@ -2,7 +2,7 @@
 
 :root {
     --color-background: #24292e; /* Body and container background */
-    --color-text-default: #FFF5EE; /* Default text */
+    --color-text-default: #f6f0eb; /* Default text */
     --color-input-background: #2b3137; /* Input and select background */
     
     --color-button-primary: #4078c0; /* Primary button */
