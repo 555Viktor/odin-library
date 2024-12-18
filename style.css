@@ -92,7 +92,8 @@ body {
 
     border: 0.1rem solid #FFF5EE;
     margin-block-start: 0.4rem;
-    padding: 1rem;
+    padding-inline: 1rem;
+    line-height: 1.2rem;
     border-radius: 1rem;
 }
 
