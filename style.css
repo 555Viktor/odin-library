@@ -21,14 +21,14 @@
     box-sizing: border-box;
 
     font-family: "Raleway", sans-serif;
-
-    color: var(--color-text-default)
+    color: var(--color-text-default);
 }
 
 /* Grouped styles */
 body,
 .input-field-wrap,
-.input-field {
+.input-field,
+.btn-submit-wrap {
     display: flex;
 } 
 
@@ -119,7 +119,6 @@ body {
 }
 
 .btn-submit-wrap {
-    display: flex;
     align-items: baseline;
 }
 
