@@ -7,6 +7,7 @@
     
     --color-button-primary: #4078c0; /* Primary button */
     --color-button-danger: #f0440a; /* Delete button */
+    --color-button-warning: #f0ad4e; /* Not read status button */
     --color-button-success: #2dba4e; /* Read status button */
 
     --color-warning-border: #bd2c00; /* Warning border */
@@ -75,6 +76,9 @@ body {
     margin-block-end: 1rem;
 }
 
+.header p {
+    font-size: 1.1rem;
+}
 /* Add book container styling*/
 .input-field-wrap {
     margin-block-end: 1.2rem;
