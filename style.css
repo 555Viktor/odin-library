@@ -34,7 +34,8 @@ body,
 
 .header,
 .add-book-container,
-.book-list-container {
+.book-list-container
+ {
     margin-block-end: 1.5rem;
     width: 60vw;
 }
@@ -182,4 +183,21 @@ body {
 
 .book-list-table .btn-read-status {
     background:var(--color-button-success);
+}
+
+@media screen and (max-width: 960px) {
+
+    .input-field-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-submit-wrap {
+        justify-content: center;
+    }
+
+    .input-field input,
+    .input-field select {
+        width: 120px;
+    } 
 }
