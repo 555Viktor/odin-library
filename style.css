@@ -187,6 +187,16 @@ body {
 
 @media screen and (max-width: 960px) {
 
+    .header,
+    .add-book-container,
+    .book-list-container {
+        width: 90%;
+    }
+
+    .header {
+        text-align: center;
+    }
+
     .input-field-wrap {
         flex-wrap: wrap;
         justify-content: center;
@@ -195,9 +205,16 @@ body {
     .btn-submit-wrap {
         justify-content: center;
     }
+    .input-field {
+        margin-block-end: 0.5rem;
+    }
 
     .input-field input,
     .input-field select {
-        width: 120px;
+        width: 150px;
     } 
+
+    .book-list-table td {
+        padding: 1rem;
+    }
 }
