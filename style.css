@@ -90,6 +90,11 @@ body {
 .header p {
     font-size: 1.1rem;
 }
+
+.header p.top-paragraph {
+    margin-block-end: 0.yrem;
+}
+
 /* Add book container styling*/
 .input-field-wrap {
     margin-block-end: 1.2rem;
@@ -185,6 +190,7 @@ body {
     background:var(--color-button-success);
 }
 
+/* Medium screen size responsiveness */
 @media screen and (max-width: 960px) {
 
     .header,
@@ -205,6 +211,7 @@ body {
     .btn-submit-wrap {
         justify-content: center;
     }
+
     .input-field {
         margin-block-end: 0.5rem;
     }
@@ -217,4 +224,15 @@ body {
     .book-list-table td {
         padding: 1rem;
     }
+}
+
+
+/* Small screen size responsiveness */
+@media screen and (max-width: 450px) { 
+
+    body {
+        font-size: 0.8rem;
+        width: fit-content;
+    }
+
 }
