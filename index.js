@@ -58,7 +58,9 @@ function addDeleteButtonEvent(deleteBtn) {
 
 function createBookReadStatusButton() {	
     let readButton = document.createElement('button');
-    readButton.innerHTML = 'Read';
+    
+    readButton.innerHTML = bookStatusSelect.value;
+    
     readButton.classList.add('btn-read-status', 'btn-shared-style');
     
     addReadButtonEvent (readButton)
