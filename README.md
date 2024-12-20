@@ -60,7 +60,6 @@ To get started with this project locally:
 - **Persistent Storage**: Add local or cloud storage to save the book list across sessions.  
 - **Enhanced Styling**: Improve the UI further for better accessibility and aesthetics.  
 
----
 
-### **Acknowledgements**  
-This project is inspired by The Odin Project's curriculum and personal experimentation. Big thanks to The Odin Project for the foundational knowledge and guidance!  
+## **Acknowledgements**  
+This project was created as part of The Odin Project's curriculum and personal experimentation. Big thanks to The Odin Project for the foundational knowledge and guidance!
