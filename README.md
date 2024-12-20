@@ -1,4 +1,4 @@
-### Library App 📚  
+# Library App 📚  
 
 **Screenshot**  
 *(Screenshot here.)*  
@@ -8,12 +8,12 @@ Check out the deployed project here: *(link)* or click the image above.
 
 ---
 
-### **Project Overview**  
+## **Project Overview**  
 Built for book enthusiasts, this app offers a simple way to organize your reading journey. Add titles in any language, update their read status, and keep track of your library in an elegantly designed, user-friendly environment.  
 
 ---
 
-### **Features**  
+## **Features**  
 This project offers a variety of features to enhance the user experience:  
 
 - **User-Friendly Interface**: Darker color palette for an eye-friendly experience. 
@@ -26,14 +26,14 @@ This project offers a variety of features to enhance the user experience:
 
 ---
 
-### **Technologies Used**  
+## **Technologies Used**  
 - **HTML**: Page structure and layout.
 - **CSS**: Page styling and design.  
 - **JavaScript**: Handles user interactions, manages the book list, and enables dynamic functionality.
 
 ---
 
-### **Installation**  
+## **Installation**  
 To get started with this project locally:  
 
 1. Clone the repository to your machine:  
@@ -48,7 +48,7 @@ To get started with this project locally:
 
 ---
 
-### **Usage**  
+## **Usage**  
 1. **Add a Book**:  
    - Fill out the book details: Title, Author, Pages, and Read Status.  
    - Click the "Submit" button to add it to your library list.  
@@ -64,7 +64,7 @@ To get started with this project locally:
 
 ---
 
-### 🛠️ **Future Enhancements**  
+## 🛠️ **Future Enhancements**  
 - **Persistent Storage**: Add local or cloud storage to save the book list across sessions.  
 - **Enhanced Styling**: Improve the UI further for better accessibility and aesthetics.  
 
