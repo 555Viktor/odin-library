@@ -92,7 +92,7 @@ body {
 }
 
 .header p.top-paragraph {
-    margin-block-end: 0.yrem;
+    margin-block-end: 0.5rem;
 }
 
 /* Add book container styling*/
@@ -233,6 +233,10 @@ body {
     body {
         font-size: 0.8rem;
         width: fit-content;
+    }
+
+    .input-field input::placeholder {
+        font-weight: bold;
     }
 
 }
