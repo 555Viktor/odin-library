@@ -1,6 +1,5 @@
 # Library App 📚  
 
-**Screenshot**  
 [![Library Preview](assets/github-library-preview.png)](https://555viktor.github.io/odin-library/)
 
 **Live Preview**  
