@@ -6,12 +6,8 @@
 **Live Preview**  
 Check out the deployed project here: *(link)* or click the image above.  
 
----
-
 ## **Project Overview**  
 Built for book enthusiasts, this app offers a simple way to organize your reading journey. Add titles in any language, update their read status, and keep track of your library in an elegantly designed, user-friendly environment.  
-
----
 
 ## **Features**  
 This project offers a variety of features to enhance the user experience:  
@@ -24,14 +20,12 @@ This project offers a variety of features to enhance the user experience:
 - **Delete Books**: Easily remove books from the list.    
 - **Input Validation**: Ensures all fields are filled before adding a book.
 
----
 
 ## **Technologies Used**  
 - **HTML**: Page structure and layout.
 - **CSS**: Page styling and design.  
 - **JavaScript**: Handles user interactions, manages the book list, and enables dynamic functionality.
 
----
 
 ## **Installation**  
 To get started with this project locally:  
@@ -46,7 +40,6 @@ To get started with this project locally:
    ```  
 3. Open `index.html` in your preferred browser to start managing your library!  
 
----
 
 ## **Usage**  
 1. **Add a Book**:  
@@ -62,7 +55,6 @@ To get started with this project locally:
 4. **Responsive Design**:  
    - Use the app on any device for a seamless experience.  
 
----
 
 ## 🛠️ **Future Enhancements**  
 - **Persistent Storage**: Add local or cloud storage to save the book list across sessions.  
