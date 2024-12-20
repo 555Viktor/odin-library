@@ -4,7 +4,7 @@
 *(Screenshot here.)*  
 
 **Live Preview**  
-Check out the deployed project here: *(link)* or click the image above.  
+Check out the deployed project here: https://555viktor.github.io/odin-library/ or click the image.  
 
 ## **Project Overview**  
 Built for book enthusiasts, this app offers a simple way to organize your reading journey. Add titles in any language, update their read status, and keep track of your library in an elegantly designed, user-friendly environment.  
