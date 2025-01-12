@@ -19,25 +19,25 @@ function Book(title, author, pages, isRead) {
     this.author = author;
     this.pages = pages;
     this.isRead = isRead || false;
-}
+};
 
 // Helper functions
 // ------------------------------------
 function showInvalidInputMessage () {
     invalidInputMessage.style.display = 'block';
-}
+};
 
 function hideInvalidInputMessage () {
     invalidInputMessage.style.display = 'none';
-}
+};
 
 function isUserInputValid() {
     return bookNameInput.value && bookAuthorInput.value && bookPagesInput.value && bookStatusSelect.value;
-}
+};
 
 function resetInputFieldValues () {
     bookNameInput.value = bookAuthorInput.value = bookPagesInput.value = bookStatusSelect.value = '';
-}
+};
 
 function createBookDeleteButton() {
     let deleteButton = document.createElement('button');
@@ -47,14 +47,14 @@ function createBookDeleteButton() {
     addDeleteButtonEvent(deleteButton);
     
     return deleteButton;
-}
+};
 
 function addDeleteButtonEvent(deleteBtn) {
     deleteBtn.addEventListener('click', (event) => {
         let currentRow = event.target.closest('tr');
         currentRow.remove();
     })
-}
+};
 
 function createBookReadStatusButton() {	
     let readButton = document.createElement('button');
@@ -66,13 +66,13 @@ function createBookReadStatusButton() {
     addReadButtonEvent (readButton)
 
     return readButton;
-}
+};
 
 function addReadButtonEvent (readBtn) {
     readBtn.addEventListener('click', () => {
         readBtn.innerText = readBtn.innerText === 'Read' ? 'Not read' : 'Read';
     })
-}
+};
 // ------------------------------------
 
 
@@ -100,7 +100,7 @@ function appendLastBookToDom (booksArr) {
 
     // After all required cells have been filled and added to the table row, add the table row to table body.
     booksTableBody.appendChild(tableRow);
-}
+};
 
 // Event
 addBookButton.addEventListener('click', () => {
@@ -120,4 +120,4 @@ addBookButton.addEventListener('click', () => {
 
     appendLastBookToDom(myBooks);
     resetInputFieldValues();
-})
+});
