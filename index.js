@@ -13,13 +13,14 @@ const booksTableBody = document.querySelector('.book-list-table .all-books-list'
 
 let myBooks = [];
 
-// Book constructer function
-function Book(title, author, pages, isRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.isRead = isRead || false;
-};
+class Book {
+    constructor (title, author, pages, isRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isRead = isRead || false;
+    };
+}
 
 // Helper functions
 // ------------------------------------
