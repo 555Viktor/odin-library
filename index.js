@@ -78,7 +78,7 @@ function addReadButtonEvent (readBtn) {
 
 
 function appendLastBookToDom (booksArr) {
-    if (booksArr.length < 0) {
+    if (booksArr.length === 0) {
         console.log('Book array is empty.');
         return
     }
